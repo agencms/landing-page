@@ -1,11 +1,325 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "827dca0071900df485741d3b1a4102b3",
     "packages": [
+        {
+            "name": "agencms/auth",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/agencms/auth.git",
+                "reference": "a255988180c461c1ccbc62e2ab3660d379e6e072"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/agencms/auth/zipball/a255988180c461c1ccbc62e2ab3660d379e6e072",
+                "reference": "a255988180c461c1ccbc62e2ab3660d379e6e072",
+                "shasum": ""
+            },
+            "require": {
+                "barryvdh/laravel-cors": "^0.11.0",
+                "laravel/framework": "^5.4|^5.5|^5.6",
+                "silvanite/brandenburg": "^1.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Agencms\\Auth\\Providers\\AgencmsAuthServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Agencms\\Auth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark",
+                    "email": "marco@silvanite.com"
+                }
+            ],
+            "description": "Agencms Authentication Package",
+            "time": "2018-06-03T20:27:57+00:00"
+        },
+        {
+            "name": "agencms/core",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/agencms/core.git",
+                "reference": "0f6aeb4d90ecb3b1c00a42db05b35958059844ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/agencms/core/zipball/0f6aeb4d90ecb3b1c00a42db05b35958059844ba",
+                "reference": "0f6aeb4d90ecb3b1c00a42db05b35958059844ba",
+                "shasum": ""
+            },
+            "require": {
+                "agencms/auth": "^1.0",
+                "agencms/settings": "^1.0",
+                "barryvdh/laravel-cors": "^0.11",
+                "laravel/framework": "^5.4|^5.5|^5.6",
+                "spatie/laravel-view-components": "^1.1",
+                "thesold/laravel-media-manager": "~1.1"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Agencms\\Core\\Providers\\AgencmsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Agencms": "Agencms\\Core\\Facades\\Agencms",
+                        "RenderEngine": "Agencms\\Core\\Facades\\RenderEngine"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Agencms\\Core\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark",
+                    "email": "marco@silvanite.com"
+                }
+            ],
+            "description": "Laravel CMS Library for Agencms",
+            "time": "2018-06-24T15:12:44+00:00"
+        },
+        {
+            "name": "agencms/settings",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/agencms/settings.git",
+                "reference": "0f59ae9f53d761c3e3ad8f9e9ba0cdb6308e9c42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/agencms/settings/zipball/0f59ae9f53d761c3e3ad8f9e9ba0cdb6308e9c42",
+                "reference": "0f59ae9f53d761c3e3ad8f9e9ba0cdb6308e9c42",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.4|^5.5|^5.6"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Agencms\\Settings\\Providers\\SettingsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Agencms\\Settings\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark",
+                    "email": "marco@silvanite.com"
+                }
+            ],
+            "description": "Settings module for Agencms",
+            "time": "2018-05-29T20:05:50+00:00"
+        },
+        {
+            "name": "asm89/stack-cors",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asm89/stack-cors.git",
+                "reference": "c163e2b614550aedcf71165db2473d936abbced6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asm89/stack-cors/zipball/c163e2b614550aedcf71165db2473d936abbced6",
+                "reference": "c163e2b614550aedcf71165db2473d936abbced6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "~2.7|~3.0|~4.0",
+                "symfony/http-kernel": "~2.7|~3.0|~4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0 || ^4.8.10",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Asm89\\Stack\\": "src/Asm89/Stack/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander",
+                    "email": "iam.asm89@gmail.com"
+                }
+            ],
+            "description": "Cross-origin resource sharing library and stack middleware",
+            "homepage": "https://github.com/asm89/stack-cors",
+            "keywords": [
+                "cors",
+                "stack"
+            ],
+            "time": "2017-12-20T14:37:45+00:00"
+        },
+        {
+            "name": "barryvdh/laravel-cors",
+            "version": "v0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-cors.git",
+                "reference": "6ba64a654b4258a3ecc11aba6614c932b3442e30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/6ba64a654b4258a3ecc11aba6614c932b3442e30",
+                "reference": "6ba64a654b4258a3ecc11aba6614c932b3442e30",
+                "shasum": ""
+            },
+            "require": {
+                "asm89/stack-cors": "^1.2",
+                "illuminate/support": "5.3.x|5.4.x|5.5.x|5.6.x",
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "^3.1|^4",
+                "symfony/http-kernel": "^3.1|^4"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.x",
+                "phpunit/phpunit": "^4.8|^5.2",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\Cors\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Cors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain",
+                "laravel"
+            ],
+            "time": "2018-01-04T06:59:27+00:00"
+        },
+        {
+            "name": "cloudinary/cloudinary_php",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "aca317781ec1ad6614187a73dd0058026a02474e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/aca317781ec1ad6614187a73dd0058026a02474e",
+                "reference": "aca317781ec1ad6614187a73dd0058026a02474e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "time": "2018-05-10T14:02:04+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -365,6 +679,141 @@
                 "trusted proxy"
             ],
             "time": "2018-02-07T20:20:57+00:00"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "PSR-7 message implementation that also provides common utility methods",
+            "keywords": [
+                "http",
+                "message",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
+            ],
+            "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "intervention/image",
+            "version": "2.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/image.git",
+                "reference": "e82d274f786e3d4b866a59b173f42e716f0783eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/e82d274f786e3d4b866a59b173f42e716f0783eb",
+                "reference": "e82d274f786e3d4b866a59b173f42e716f0783eb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "guzzlehttp/psr7": "~1.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "phpunit/phpunit": "^4.8 || ^5.7"
+            },
+            "suggest": {
+                "ext-gd": "to use GD library based image processing.",
+                "ext-imagick": "to use Imagick based image processing.",
+                "intervention/imagecache": "Caching extension for the Intervention Image library"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ],
+                    "aliases": {
+                        "Image": "Intervention\\Image\\Facades\\Image"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Intervention\\Image\\": "src/Intervention/Image"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@olivervogel.com",
+                    "homepage": "http://olivervogel.com/"
+                }
+            ],
+            "description": "Image handling and manipulation library with support for Laravel integration",
+            "homepage": "http://image.intervention.io/",
+            "keywords": [
+                "gd",
+                "image",
+                "imagick",
+                "laravel",
+                "thumbnail",
+                "watermark"
+            ],
+            "time": "2018-05-29T14:19:03+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1020,6 +1469,56 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -1265,6 +1764,111 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
+        },
+        {
+            "name": "silvanite/brandenburg",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Silvanite/brandenburg.git",
+                "reference": "bce1d18cbdbfe2f5cb2dc65ab4ab2c539687e432"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Silvanite/brandenburg/zipball/bce1d18cbdbfe2f5cb2dc65ab4ab2c539687e432",
+                "reference": "bce1d18cbdbfe2f5cb2dc65ab4ab2c539687e432",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^6.4",
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Silvanite\\Brandenburg\\Providers\\BrandenburgServiceProvider"
+                    ],
+                    "aliases": {
+                        "BrandenburgPolicy": "Silvanite\\Brandenburg\\Facades\\PolicyFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Silvanite\\Brandenburg\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark (m2de)",
+                    "email": "marco@silvanite.com"
+                }
+            ],
+            "description": "Laravel Authentication Package",
+            "time": "2018-03-19T15:27:36+00:00"
+        },
+        {
+            "name": "spatie/laravel-view-components",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-view-components.git",
+                "reference": "261db0075aea86fa53f1d8b8153410f909587ed4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-view-components/zipball/261db0075aea86fa53f1d8b8153410f909587ed4",
+                "reference": "261db0075aea86fa53f1d8b8153410f909587ed4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.6.*",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\ViewComponents\\ViewComponentsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ViewComponents\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A better way to connect data with view rendering in Laravel",
+            "homepage": "https://github.com/spatie/laravel-view-components",
+            "keywords": [
+                "laravel-view-components",
+                "spatie"
+            ],
+            "time": "2018-06-04T15:36:47+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2190,6 +2794,55 @@
                 "dump"
             ],
             "time": "2018-04-29T07:56:09+00:00"
+        },
+        {
+            "name": "thesold/laravel-media-manager",
+            "version": "v1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thesold/laravel-media-manager.git",
+                "reference": "6d1145e0f4a286458b994297077d52be4728eb07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thesold/laravel-media-manager/zipball/6d1145e0f4a286458b994297077d52be4728eb07",
+                "reference": "6d1145e0f4a286458b994297077d52be4728eb07",
+                "shasum": ""
+            },
+            "require": {
+                "barryvdh/laravel-cors": "^0.11.0",
+                "cloudinary/cloudinary_php": "^1.9",
+                "intervention/image": "^2.4",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Thesold\\LaravelMediaManager\\MediaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Thesold\\LaravelMediaManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark",
+                    "email": "marco@silvanite.com"
+                }
+            ],
+            "description": "Laravel Media Manager for use with Vue Media Manager",
+            "time": "2018-05-08T20:10:19+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
