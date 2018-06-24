@@ -56,20 +56,21 @@
         },
         {
             "name": "agencms/core",
-            "version": "1.1.7",
+            "version": "1.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agencms/core.git",
-                "reference": "db6d847fba13ac378bb532f8ce7de1978577978d"
+                "reference": "67a20e1889fb4f8548a38b66ff0abf72194bb49e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencms/core/zipball/db6d847fba13ac378bb532f8ce7de1978577978d",
-                "reference": "db6d847fba13ac378bb532f8ce7de1978577978d",
+                "url": "https://api.github.com/repos/agencms/core/zipball/67a20e1889fb4f8548a38b66ff0abf72194bb49e",
+                "reference": "67a20e1889fb4f8548a38b66ff0abf72194bb49e",
                 "shasum": ""
             },
             "require": {
                 "agencms/auth": "^1.0",
+                "agencms/laravel-preset": "^1.0",
                 "agencms/settings": "^1.0",
                 "barryvdh/laravel-cors": "^0.11",
                 "laravel/framework": "^5.4|^5.5|^5.6",
@@ -77,7 +78,6 @@
                 "thesold/laravel-media-manager": "~1.1"
             },
             "require-dev": {
-                "agencms/laravel-preset": "^1.0",
                 "squizlabs/php_codesniffer": "^3.1"
             },
             "type": "library",
@@ -108,7 +108,50 @@
                 }
             ],
             "description": "Laravel CMS Library for Agencms",
-            "time": "2018-06-24T15:26:01+00:00"
+            "time": "2018-06-24T15:32:40+00:00"
+        },
+        {
+            "name": "agencms/laravel-preset",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/agencms/laravel-preset.git",
+                "reference": "7e1c8680d01128f3653cf208732df3caf13d6664"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/agencms/laravel-preset/zipball/7e1c8680d01128f3653cf208732df3caf13d6664",
+                "reference": "7e1c8680d01128f3653cf208732df3caf13d6664",
+                "shasum": ""
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Agencms\\LaravelPreset\\AgencmsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Agencms\\LaravelPreset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark",
+                    "email": "m2de@outlook.com"
+                }
+            ],
+            "description": "Front-end preset for Agencms if you wish to use the default views and templates",
+            "time": "2018-06-24T15:15:49+00:00"
         },
         {
             "name": "agencms/settings",
